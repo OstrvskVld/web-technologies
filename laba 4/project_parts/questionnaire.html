@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionnaire</title>
+  </head>
+  <body>
+    <form action="./form-result/form-result.html" method="post">
+    <fieldset>
+      <legend>Форма для заповнення</legend>
+    
+    <fieldset>
+      <legend>Особисті дані:</legend>
+      <label for="name">Ім`я</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        tabindex="1"
+        required
+        placeholder="Введіть ім`я"
+      />
+      <br /><br />
+      <label for="password">Пароль</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        tabindex="2"
+        required
+        pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}$"
+        placeholder="Введіть пароль"
+      />
+      <br /><br />
+      <label for="birthday">День народження</label>
+      <input
+        type="date"
+        name="birthday"
+        id="birthday"
+        tabindex="3"
+        required
+        placeholder="Введіть свою дату народження"
+      />
+      <br /><br />
+      <label for="photo">Завантажити свою фотографію</label>
+      <input type="file" name="photo" id="photo" accept="audio/*" multiple />
+      <br /><br />
+    </fieldset>
+    <fieldset>
+      <legend>Контактні дані</legend>
+      <label for="email">Електронна пошта</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        tabindex="5"
+        autocomplete="off"
+        required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        placeholder="Введіть email"
+      />
+      <br /><br />
+      <label for="number">Номер телефону</label>
+      <input
+        type="tel"
+        id="number"
+        tabindex="6"
+        name="number"
+        required
+        pattern="\+?\d{1,3}?[- .]?\(\d{3}\)?[- .]?\d{3}[- .]?\d{4}"
+        placeholder="Введіть номер телефону"
+      />
+      <br /><br />
+      <label for="information">Додаткова інформація:</label>
+      <textarea name="information" tabindex="4" id="information"></textarea>
+      <br />
+    </fieldset>
+    <fieldset>
+      <legend>Більше інформації</legend>
+      <div>
+        <label for="placeofbirth">Місце проживання</label>
+        <select name="placeofbirth" id="placeofbirth">
+          <option>Україна</option>
+          <option>Польща</option>
+          <option selected>Німеччина</option>
+          <option>США</option>
+          <option>Азія</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label for="languages">Знання мов</label>
+        <select id="languages" name="languages" multiple>
+          <option>Українська</option>
+          <option>Англійська</option>
+          <option>Корейська</option>
+          <option>Польска</option>
+          <option>Німецька</option>
+          <option>Іспанська</option>
+        </select>
+      </div>
+      <br /><br />
+      <div>
+        <label for="languagesprogram">Знання мов програмування</label>
+        <select name="languagesprogram" id="languagesprogram" required>
+          <optgroup label="FrontEnd">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+          </optgroup>
+          <optgroup label="BackEnd">
+            <option>C++</option>
+            <option>Java</option>
+            <option>Python</option>
+          </optgroup>
+          <optgroup label="Database">
+            <option>MY Sql</option>
+            <option>NO SQL</option>
+            <option>PostGreSQL</option>
+          </optgroup>
+          <optgroup label="Web Server">
+            <option>Apache</option>
+            <option>Nginx</option>
+            <option>AWS</option>
+          </optgroup>
+          <optgroup label="Fullstack">
+            <option value="fullstack">Fullstack</option>
+          </optgroup>
+        </select>
+      </div>
+      <br /><br />
+      <div>
+        <input list="texts" id="text" placeholder="Введіть свою посаду" />
+        <datalist id="texts">
+          <option value="FrontEnd"></option>
+          <option value="BackEnd"></option>
+          <option value="Database"></option>
+          <option value="Web Server"></option>
+          <option value="Fullstack"></option>
+        </datalist>
+      </div>
+      <br /><br />
+      <fieldset>
+        <legend>Гендер</legend>
+        <label for="gender1">
+          <input type="radio" name="gender1" value="option1" tabindex="7" />
+          Чоловік
+        </label>
+        <label for="gender2">
+          <input type="radio" name="gender2" value="option2" tabindex="7" />
+          Жінка
+        </label>
+        <label for="gender2">
+          <input type="radio" name="gender2" value="option3" tabindex="7" />
+          Інше
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Сімейний стан</legend>
+        <label for="familystatus1">
+          <input type="radio" name="familystatus1" value="optionA" />
+          Одружений/одружена
+        </label>
+        <label for="familystatus2">
+          <input type="radio" name="familystatus2" value="optionB" checked /> Не
+          заміжня/Неодружений (за замовчуванням)
+        </label>
+        <label for="familystatus3">
+          <input type="radio" name="familystatus3" value="optionC" />
+          Розлучений(а)
+        </label>
+      </fieldset>
+    </fieldset>
+
+    <br />
+
+    <input type="checkbox" tabindex="9" name="confirm" id="confirm" />
+    <label for="comfirm">Підписатись на розсилку по пошті</label>
+
+    <br /><br />
+
+    <button tabindex="10" type="submit">Відправити</button>
+    <button tabindex="11" type="reset">Очистити</button>
+
+    </fieldset>
+    </form>
+
+    <br /><br /><br />
+
+    <h2><a href="/laba 4/index.html">Повернутися на головну</a></h2>
+  </body>
+</html>
