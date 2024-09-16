@@ -1,0 +1,44 @@
+* {
+    text-align: center;
+}
+
+.main-header {
+    font-size: 65px;
+    color: red;
+    margin-bottom: 0;
+}
+
+.second-header {
+    font-style: italic;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.bg-yellow {
+    background: yellow;
+}
+
+.cook-list {
+    list-style: none;
+}
+
+.cook-item > p {
+    font-size: 20px;
+}
+
+.txt-underline {
+    text-decoration: underline;
+}
+
+.txt-crossed {
+    text-decoration: line-through;
+}
+
+.txt-italic {
+    font-style: italic;
+}
+
+.txt-bold {
+    font-weight: bold;
+}
+
