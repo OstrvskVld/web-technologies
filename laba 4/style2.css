@@ -5,13 +5,13 @@
 .main-header {
     font-size: 65px;
     color: red;
-    margin-bottom: 0;
+    
 }
 
 .second-header {
     font-style: italic;
     font-size: 32px;
-    margin-bottom: 5px;
+    line-height: 20px;
 }
 
 .bg-yellow {
