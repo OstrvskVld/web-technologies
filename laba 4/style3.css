@@ -1,0 +1,34 @@
+main {
+    font-size: 20px;
+}
+a {
+    color: purple;
+}
+
+.list-header {
+    color: green;
+}
+
+.food-item:first-of-type > ul > li {
+    list-style: none;
+}
+
+.berries-list {
+    list-style: square;
+}
+
+.vegetables-list{
+    list-style-image: url(./image/li.svg);
+}
+
+.berries-list a {
+    text-decoration: none;
+}
+
+ol {
+   list-style-position: inside;
+}
+
+.other-list-header{
+    margin: 0px;
+}
