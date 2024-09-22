@@ -1,0 +1,133 @@
+
+
+.container1 {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+.main-info1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.list {
+    list-style-position: inside;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.rule {
+    background-image: url('./image/rule.png');
+    background-position: 3px 5px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding: 0 40px 0px;
+    margin-bottom: 10px;
+    background-color: rgb(103, 158, 128);
+}
+
+.list2 {
+    font-size: 18px;
+    font-style: italic;
+    padding-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+}
+
+.list2 > li {
+    background-color: rgb(153, 180, 102);
+}
+
+.units {
+    background-image: url('./image/ad_units.png');
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.ticket {
+    background-image: url('./image/airplane_ticket.png');
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.hotel {
+    background-image: url('./image/hotel.png');
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.car {
+    background-image: url('./image/car_rental.png');
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.bar {
+    background-image: url('./image/local_bar.png');
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.casino {
+    background-image: url('./image/casino.png');
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.museum {
+    background-image: url('./image/museum.png');
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.festival {
+    background-image: url('./image/festival.png');
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.list-info1 {
+    padding: 10px 20px;
+    display: inline-block;  
+}
+
+.rule > span {
+    font-size: 20px;
+    font-weight: 700 bold;
+    background-color: rgb(199, 124, 106);
+    margin: 0 0 0 5px;
+}
+
+.list2 span {
+    background-color: rgb(218, 106, 32);
+    padding: 20px;
+    font-weight: 600;
+}
