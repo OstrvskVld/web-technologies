@@ -56,4 +56,39 @@ body {
     font-weight: bold;
   }
 
+  .block_list {
+    list-style: none;
+    padding: 5px;
+}
+
+  .block_list li{
+    width: 300px;
+    margin: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    float: left;
+  }
+
+  .block_title{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .first_block{
+    border-radius: 20px;
+    border: 5px solid green;
+}
+
+.second_block{
+  border: 5px solid green;
+  border-radius: 70px 1px 70px 1px;
+}
+
+.third_block{
+  border: 5px solid green;
+  border-radius: 50px 200px / 50px 200px;
+}
+
+
+
   
