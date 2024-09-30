@@ -62,7 +62,7 @@ div {
   column-count: 3;
   column-gap: 35px;
   column-width: 150px;
-  column-rule: 5px dotted red;
+  column-rule: 5px dotted red;  
 }
 .p-img {
   width: 200px;
