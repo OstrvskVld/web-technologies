@@ -58,7 +58,7 @@ header {
   text-align: center;
   background-color: blueviolet;
   text-decoration: none;
-  color: white; 
+  color: white;
   font-weight: bold;
 }
 
@@ -69,13 +69,14 @@ span {
   text-align: center;
   display: block;
   margin-bottom: 20px;
-  
 }
 
-
-.column_blocks{
+.column_blocks {
   margin: 50px auto;
-  max-width: 90%; 
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .dark_block {
   margin-bottom: 20px;
@@ -83,16 +84,21 @@ span {
   color: white;
   border-radius: 50px;
   padding: 30x;
-  width: 100%; 
-  max-width: 1000px; 
+  width: 100%;
+  max-width: 1000px;
   height: 250px;
 }
 
-.dark_block p{
-  
+.dark_block span {
+  margin-top: 20px;
 }
 
-.column_blocks p{
+.dark_block,
+.p2 {
+  padding: 0px 30px 20px 30px;
+}
+
+.column_blocks p {
   margin: 0;
 }
 
@@ -102,8 +108,8 @@ span {
   color: white;
   border-radius: 50px;
   padding: 30px;
-  width: 100%; 
-  max-width: 1000px; 
+  width: 100%;
+  max-width: 1000px;
 }
 
 .inside_blocks {
@@ -112,22 +118,23 @@ span {
   margin-top: 20px;
 }
 
-.first_block, .second_block {
-  flex: 1; 
+.first_block,
+.second_block {
+  flex: 1;
   background-color: rgba(194, 25, 25, 0.604);
   padding: 20px;
   border-radius: 50px;
-  min-width: 300px; 
+  min-width: 300px;
 }
 
 .first_block {
-  margin-right: 10px;
+  margin-right: 50px;
 }
 
 .second_block {
-  margin-left: 10px;
+  margin-left: 50px;
 }
 
-div .p1{
+div .p1 {
   padding-top: 20px;
 }
