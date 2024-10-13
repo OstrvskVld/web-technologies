@@ -99,7 +99,8 @@ header {
   opacity: 0;
 }
 
-.first-block:hover + .second-block {
+.first-block:hover + .second-block,
+.second-block:hover {
     opacity: 1;
 }
 
