@@ -91,6 +91,7 @@ main {
 }
 
 h1 {
+  width: 100%;
   text-align: center;
   font-size: 25px;
   color: #7d21b3;
@@ -98,6 +99,9 @@ h1 {
   font-style: italic;
   margin: 20px;
   position: relative;
+  bottom: 400px;
+  left: 130px;
+  white-space: nowrap;
 }
 
 h1::first-letter {
@@ -109,10 +113,10 @@ h1::first-letter {
   content: "";
   display: block;
   position: absolute;
-  top: 35px;
-  right: 380px;
+  top: 38px;
+  right: 550px;
   background-color: red;
-  width: 30%;
+  width: 150px;
   height: 3px;
 }
 
@@ -120,10 +124,10 @@ h1::first-letter {
   content: "";
   display: block;
   position: absolute;
-  top: 35px;
-  left: 380px;
+  top: 38px;
+  left: 250px;
   background-color: red;
-  width: 30%;
+  width: 150px;
   height: 3px;
 }
 
@@ -137,6 +141,8 @@ label {
   border: none;
   width: max-content;
   float: left;
+  position: relative;
+  top: 30px;
 }
 
 .about-field {
@@ -144,13 +150,15 @@ label {
   border: none;
   margin: 5px 10px;
   padding: 5px 0 5px 0;
+  position: relative;
+  top: 30px;
 }
 
 .about {
   margin: 0;
   position: relative;
   display: block;
-  width: 540px;
+  width: 520px;
   height: 46px;
   padding: 5px;
   opacity: 60%;
@@ -158,3 +166,112 @@ label {
   resize: none;
   color: black;
 }
+
+.button {
+  width: 130px;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 50px;
+  margin: 5px 5px;
+  float: right;
+  position: relative;
+  top: 30px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.text-input:hover {
+  padding-bottom: 4px;
+  color: #fbff00;
+}
+
+.text-input:focus {
+  padding-bottom: 4px;
+  color: #ffa600;
+}
+
+.password-input:hover {
+  padding-bottom: 4px;
+  color: #1eff00;
+}
+.password-input:focus {
+  padding-bottom: 4px;
+  color: #00ffea;
+}
+
+.about:hover {
+  box-shadow: 0 0 10px 10px rgba(233, 27, 154, 0.6);
+}
+
+.submit {
+  border: 3px solid #0097a7;
+  color: #0097a7;
+}
+
+.submit:hover {
+  border: 3px solid #0097a7;
+  color: white;
+  background-color: #0097a7;
+  border-radius: 15px;
+}
+
+.submit:active {
+  border: 3px solid #ecfd00;
+  background-color: #014950;
+  border-radius: 25px;
+  position: relative;
+}
+
+.reset:hover {
+  border: 3px solid #e64a19;
+  color: white;
+  background-color: #e64a19;
+  border-radius: 15px;
+}
+
+.reset:active {
+  border: 3px solid #ecfd00;
+  background-color: #a02904;
+  border-radius: 25px;
+  position: relative;
+}
+
+.reset {
+  border: 3px solid #e64a19;
+  color: #e64a19;
+}
+
+.submit:active ~ .title {
+  display: none;
+}
+
+.submit:active ~ .hide-title {
+  display: block;
+}
+
+.reset:before {
+  content: "";
+  background: red;
+  height: 4px;
+  width: 350px;
+  position: absolute;
+  bottom: 385px;
+  left: -170px;
+}
+.hide-title {
+  display: none;
+}
+.submit:active ~ .reset:before {
+  content: "";
+  background: rgb(29, 243, 29);
+  height: 4px;
+  width: 500px;
+  position: absolute;
+  bottom: 385px;
+  left: -230px;
+}
+
+
