@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
+}
+* {
+  font-size: 18px;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+}
+.logo-div {
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  padding: 10px;
+}
+.logo > img {
+  width: 40px;
+}
+.tasks {
+  float: right;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  list-style: none;
+}
+
+.tasks li {
+  float: left;
+  margin: 0 10px;
+}
+.tasks a {
+  display: block;
+  padding: 20px 30px;
+  text-align: center;
+  background-color: blueviolet;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.horizontal-nav {
+  position: fixed;
+  top: 270px;
+  width: 250px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  z-index: 1000;
+  border: 2px solid green;
+}
+
+.horizontal-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.horizontal-nav li {
+  position: relative;
+}
+
+.home-icon{
+    background-color: green;
+}
+.horizontal-nav a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.horizontal-nav a:hover {
+  background-color: #555;
+}
+
+.horizontal-nav .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-nav li:hover .dropdown {
+  display: block;
+}
+
+.horizontal-nav .dropdown li a {
+  padding: 10px 20px;
+  width: 200px;
+}
+
+.right-float {
+  margin-left: auto;
+}
+
+.vertical-nav {
+  position: fixed;
+  left: 0;
+  top: 320px;
+  width: 250px;
+  height: 400px;
+  background-color: #222;
+  padding-top: 20px;
+}
+
+.vertical-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vertical-nav li {
+  position: relative;
+}
+
+.vertical-nav a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.vertical-nav a:hover {
+  background-color: #555;
+}
+
+.vertical-nav .dropdown {
+  display: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.vertical-nav li:hover .dropdown {
+  display: block;
+}
+
+.material-icons {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.horizontal-nav a.active,
+.vertical-nav a.active {
+  background-color: #666;
+  color: #fff;
+}
+
+.horizontal-nav.sticky {
+  position: sticky;
+  top: 0;
+}
