@@ -5,15 +5,18 @@ body {
   background-color: #f4f4f9;
   font-family: Arial, sans-serif;
 }
+
 * {
   font-size: 18px;
   box-sizing: border-box;
 }
+
 header {
   width: 100%;
   background-color: #333;
   padding: 10px 20px;
 }
+
 .logo-div {
   padding: 0;
   display: inline-block;
@@ -21,6 +24,7 @@ header {
   align-items: center;
   width: 100%;
 }
+
 .logo {
   display: flex;
   justify-content: center;
@@ -28,9 +32,11 @@ header {
   border-radius: 100%;
   padding: 10px;
 }
+
 .logo > img {
   width: 40px;
 }
+
 .tasks {
   float: right;
   margin: 0;
@@ -45,6 +51,7 @@ header {
   float: left;
   margin: 0 10px;
 }
+
 .tasks a {
   display: block;
   padding: 20px 30px;
@@ -54,8 +61,6 @@ header {
   color: white;
   font-weight: bold;
 }
-
-
 
 .horizontal-nav ul {
   list-style: none;
@@ -68,9 +73,10 @@ header {
   position: relative;
 }
 
-.home-icon{
-    background-color: green;
+.home-icon {
+  background-color: green;
 }
+
 .horizontal-nav a {
   display: block;
   padding: 10px;
@@ -98,6 +104,40 @@ header {
   display: block;
 }
 
+.horizontal-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: flex;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-dropdown li {
+  margin: 0;
+}
+
+.horizontal-dropdown a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  background-color: #444;
+  display: block;
+}
+
+.horizontal-dropdown a:hover {
+  background-color: #555;
+}
+
+/* Відображення підменю Family, Work та Friends */
+.family:hover .horizontal-dropdown,
+.work:hover .horizontal-dropdown,
+.friends:hover .horizontal-dropdown {
+  display: flex;
+}
+
 .horizontal-nav .dropdown li a {
   padding: 10px 20px;
   width: 200px;
@@ -106,8 +146,6 @@ header {
 .right-float {
   margin-left: auto;
 }
-
-
 
 .vertical-nav ul {
   list-style: none;
@@ -124,13 +162,17 @@ header {
   align-items: center;
   padding: 10px;
   position: relative;
-  left: 30px;
   color: white;
   text-decoration: none;
   font-size: 18px;
   transition: background-color 0.3s;
 }
 
+.vertical-nav img {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
 
 .vertical-nav a:hover {
   background-color: #555;
@@ -162,15 +204,15 @@ header {
   top: 0;
 }
 
-.text{
+.text {
   position: absolute;
   top: 700px;
 }
 
 .horizontal-nav {
   position: fixed;
-  top: 269px; 
-  width: 300px; 
+  top: 269px;
+  width: 300px;
   background-color: #333;
   display: flex;
   justify-content: space-between;
@@ -180,13 +222,23 @@ header {
 }
 
 .vertical-nav {
-  position: fixed; 
-  left: 0; 
-  top: 320px; 
+  position: fixed;
+  left: 0;
+  top: 320px;
   width: 300px;
-  height: 300px;
+  height: 320px;
   background-color: #222;
   padding-top: 20px;
 }
 
+.horizontal-dropdown.wife {
+  display: none;
+}
 
+.horizontal-dropdown.workua {
+  display: none;
+}
+
+.horizontal-dropdown.bestfriend {
+  display: none;
+}
