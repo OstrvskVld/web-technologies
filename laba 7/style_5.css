@@ -1,66 +1,150 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #f4f4f9;
-    font-family: Arial, sans-serif;
-  }
-  
-  * {
-    font-size: 18px;
-    box-sizing: border-box;
-  }
-  
-  header {
-    width: 100%;
-    background-color: #333;
-    padding: 10px 20px;
-  }
-  
-  .logo-div {
-    padding: 0;
-    display: inline-block;
-    position: relative;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    padding: 10px;
-  }
-  
-  .logo > img {
-    width: 40px;
-  }
-  
-  .tasks {
-    float: right;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    list-style: none;
-  }
-  
-  .tasks li {
-    float: left;
-    margin: 0 10px;
-  }
-  
-  .tasks a {
-    display: block;
-    padding: 20px 30px;
-    text-align: center;
-    background-color: blueviolet;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  
-  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo-div {
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.logo > img {
+  width: 40px;
+}
+
+.tasks {
+  float: right;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  list-style: none;
+}
+
+.tasks li {
+  float: left;
+  margin: 0 10px;
+}
+
+.tasks a {
+  display: block;
+  padding: 20px 30px;
+  text-align: center;
+  background-color: blueviolet;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.wrapper {
+  background-color: #686868;
+  width: 500px;
+  height: 380px;
+  margin: 100px auto;
+}
+
+.black-box {
+  display: block;
+  position: absolute;
+  right: 45%;
+  margin: 0 auto;
+  top: 400px;
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  overflow: visible;
+  box-shadow: rgba(0, 0, 0, 0.57) 2px 10px 20px;
+  z-index: 2;
+}
+.black-box img {
+  overflow: visible;
+  position: absolute;
+  transform: translateY(35%) translateX(35%);
+}
+.black-box p {
+  color: rgba(255, 255, 255, 0.73);
+  position: absolute;
+  margin: 10px;
+  left: 0;
+  bottom: 0;
+  font-size: 60px;
+  font-weight: 600;
+}
+.buttons {
+  position: absolute;
+  left: -35px;
+  top: 30%;
+}
+.black-box .buttons button {
+  float: left;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  background-color: #686868;
+  border: 0;
+}
+.week-temperature {
+  background-color: lightgray;
+  position: absolute;
+  width: 250px;
+  height: 125px;
+  right: 40%;
+  top: 600px;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.52) 10px 10px 5px;
+}
+.temperature-list {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  float: right;
+  list-style-type: none;
+  background-color: lightgray;
+  padding: 0;
+}
+.day-box {
+  text-align: center;
+  height: 100%;
+  float: left;
+  width: 19.4%;
+  position: relative;
+}
+.day-box p {
+  position: absolute;
+  transform: translateX(10px);
+}
+.day-box p:first-child {
+  font-size: 10px;
+  color: gray;
+  bottom: 25px;
+}
+.day-box p:nth-child(2) {
+  top: 75px;
+}
