@@ -131,6 +131,12 @@ header {
   background-color: #555;
 }
 
+.family:hover .horizontal-dropdown,
+.work:hover .horizontal-dropdown,
+.friends:hover .horizontal-dropdown {
+  display: block;
+}
+
 .horizontal-nav .dropdown li a {
   padding: 10px 20px;
   width: 200px;
