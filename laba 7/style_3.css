@@ -179,9 +179,7 @@ label {
   top: 30px;
 }
 
-.button:hover {
-  cursor: pointer;
-}
+
 
 .text-input:hover {
   padding-bottom: 4px;
@@ -225,12 +223,7 @@ label {
   position: relative;
 }
 
-.reset:hover {
-  border: 3px solid #e64a19;
-  color: white;
-  background-color: #e64a19;
-  border-radius: 15px;
-}
+ 
 
 .reset:active {
   border: 3px solid #ecfd00;

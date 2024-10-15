@@ -55,18 +55,7 @@ header {
   font-weight: bold;
 }
 
-.horizontal-nav {
-  position: fixed;
-  top: 270px;
-  width: 250px;
-  background-color: #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  z-index: 1000;
-  border: 2px solid green;
-}
+
 
 .horizontal-nav ul {
   list-style: none;
@@ -118,15 +107,7 @@ header {
   margin-left: auto;
 }
 
-.vertical-nav {
-  position: fixed;
-  left: 0;
-  top: 320px;
-  width: 250px;
-  height: 400px;
-  background-color: #222;
-  padding-top: 20px;
-}
+
 
 .vertical-nav ul {
   list-style: none;
@@ -142,11 +123,14 @@ header {
   display: flex;
   align-items: center;
   padding: 10px;
+  position: relative;
+  left: 30px;
   color: white;
   text-decoration: none;
   font-size: 18px;
   transition: background-color 0.3s;
 }
+
 
 .vertical-nav a:hover {
   background-color: #555;
@@ -177,3 +161,32 @@ header {
   position: sticky;
   top: 0;
 }
+
+.text{
+  position: absolute;
+  top: 700px;
+}
+
+.horizontal-nav {
+  position: fixed;
+  top: 269px; 
+  width: 300px; 
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border: 2px solid green;
+}
+
+.vertical-nav {
+  position: fixed; 
+  left: 0; 
+  top: 320px; 
+  width: 300px;
+  height: 300px;
+  background-color: #222;
+  padding-top: 20px;
+}
+
+
