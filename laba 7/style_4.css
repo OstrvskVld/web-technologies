@@ -131,13 +131,6 @@ header {
   background-color: #555;
 }
 
-/* Відображення підменю Family, Work та Friends */
-.family:hover .horizontal-dropdown,
-.work:hover .horizontal-dropdown,
-.friends:hover .horizontal-dropdown {
-  display: flex;
-}
-
 .horizontal-nav .dropdown li a {
   padding: 10px 20px;
   width: 200px;
@@ -191,12 +184,6 @@ header {
 .material-icons {
   margin-right: 10px;
   vertical-align: middle;
-}
-
-.horizontal-nav a.active,
-.vertical-nav a.active {
-  background-color: #666;
-  color: #fff;
 }
 
 .horizontal-nav.sticky {
