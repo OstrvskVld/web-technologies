@@ -90,7 +90,7 @@ main {
   border-radius: 10px;
 }
 
-h1 {
+legend {
   width: 100%;
   text-align: center;
   font-size: 25px;
@@ -100,11 +100,13 @@ h1 {
   margin: 20px;
   position: relative;
   bottom: 400px;
-  left: 130px;
+  left: -20px;
   white-space: nowrap;
+  overflow: hidden;
+  max-height: 50px;
 }
 
-h1::first-letter {
+legend::first-letter {
   font-size: 50px;
   color: pink;
 }
@@ -114,7 +116,7 @@ h1::first-letter {
   display: block;
   position: absolute;
   top: 38px;
-  right: 550px;
+  right: -5px;
   background-color: red;
   width: 150px;
   height: 3px;
@@ -125,7 +127,7 @@ h1::first-letter {
   display: block;
   position: absolute;
   top: 38px;
-  left: 250px;
+  left: -5px;
   background-color: red;
   width: 150px;
   height: 3px;
@@ -251,7 +253,7 @@ label {
   height: 4px;
   width: 350px;
   position: absolute;
-  bottom: 385px;
+  bottom: 360px;
   left: -170px;
 }
 .hide-title {
@@ -263,7 +265,7 @@ label {
   height: 4px;
   width: 500px;
   position: absolute;
-  bottom: 385px;
+  bottom: 365px;
   left: -230px;
 }
 

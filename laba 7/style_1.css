@@ -5,15 +5,18 @@ body {
   background-color: #f4f4f9;
   font-family: Arial, sans-serif;
 }
+
 * {
   font-size: 18px;
   box-sizing: border-box;
 }
+
 header {
   width: 100%;
   background-color: #333;
   padding: 10px 20px;
 }
+
 .logo-div {
   padding: 0;
   display: inline-block;
@@ -21,6 +24,7 @@ header {
   align-items: center;
   width: 100%;
 }
+
 .logo {
   display: flex;
   justify-content: center;
@@ -28,9 +32,11 @@ header {
   border-radius: 100%;
   padding: 10px;
 }
+
 .logo > img {
   width: 40px;
 }
+
 .tasks {
   float: right;
   margin: 0;
@@ -45,6 +51,7 @@ header {
   float: left;
   margin: 0 10px;
 }
+
 .tasks a {
   display: block;
   padding: 20px 30px;
@@ -55,12 +62,16 @@ header {
   font-weight: bold;
 }
 
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 5px;
-  justify-content: center;
+.base-block {
+  display: block;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black; 
+  padding: 230px;
+  margin: 0 auto;
+  max-width: 100%; 
+  max-height: 100%; 
 }
 
 .top-block,
@@ -71,24 +82,25 @@ header {
   text-align: center;
   border: 2px solid #333;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
   color: white;
   padding: 20px;
+  position: absolute;
 }
 
 .top-block {
   background-color: green;
-  top: 20px;
+  right: 600px;
+  bottom: 200px;
 }
 
 .neighboring_left-block {
   background-color: blue;
-  bottom: 100px;
-  right: 250px;
+  bottom: 150px;
+  left: 435px;
 }
 
 .neighboring_right-block {
   background-color: rgb(147, 136, 158);
-  bottom: 270px;
-  left: 250px;
+  right: 350px;
+  bottom: 80px;
 }

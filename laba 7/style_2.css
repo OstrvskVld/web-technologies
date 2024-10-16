@@ -88,14 +88,13 @@ header {
   background-color: blue;
   left: 300px;
   bottom: 150px;
-  transition: opacity 1s ease-in-out;
   opacity: 0;
 }
 
 .third-block {
   background-color: rgb(100, 20, 70);
   bottom: 350px;
-  transition: opacity 1s ease-in-out;
+  
   opacity: 0;
 }
 
