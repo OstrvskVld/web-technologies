@@ -101,12 +101,24 @@ legend {
   position: relative;
   bottom: 400px;
   left: -20px;
-  white-space: nowrap;
-  overflow: hidden;
-  max-height: 50px;
 }
 
-legend::first-letter {
+.title span {
+  display: inline-block;
+  max-width: 243px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  left: 5px;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: #7d21b3;
+  margin: 20px;
+}
+
+span::first-letter {
   font-size: 50px;
   color: pink;
 }
@@ -115,8 +127,8 @@ legend::first-letter {
   content: "";
   display: block;
   position: absolute;
-  top: 38px;
-  right: -5px;
+  top: 60px;
+  right: -15px;
   background-color: red;
   width: 150px;
   height: 3px;
@@ -126,7 +138,7 @@ legend::first-letter {
   content: "";
   display: block;
   position: absolute;
-  top: 38px;
+  top: 60px;
   left: -5px;
   background-color: red;
   width: 150px;
@@ -181,8 +193,6 @@ label {
   top: 30px;
 }
 
-
-
 .text-input:hover {
   padding-bottom: 4px;
   color: #fbff00;
@@ -225,8 +235,6 @@ label {
   position: relative;
 }
 
- 
-
 .reset:active {
   border: 3px solid #ecfd00;
   background-color: #a02904;
@@ -244,7 +252,23 @@ label {
 }
 
 .submit:active ~ .hide-title {
-  display: block;
+  display: inline-block;
+  max-width: 203px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  left: 170px;
+  bottom: 380px;
+  width: 100%;
+}
+
+.submit:active ~ .hide-title span{
+  font-size: 25px;
+}
+
+.submit:active ~ .hide-title::first-letter {
+  font-size: 50px;
+  color: pink;
 }
 
 .reset:before {
@@ -268,5 +292,3 @@ label {
   bottom: 365px;
   left: -230px;
 }
-
-
