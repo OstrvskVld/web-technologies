@@ -67,7 +67,7 @@ header {
   position: relative;
   align-items: center;
   justify-content: space-between;
-  background-color: black; 
+  background-color: rgb(10, 1, 1); 
   padding: 230px;
   margin: 0 auto;
   max-width: 100%; 
@@ -96,11 +96,11 @@ header {
 .neighboring_left-block {
   background-color: blue;
   bottom: 150px;
-  left: 435px;
+  left: 436px;
 }
 
 .neighboring_right-block {
   background-color: rgb(147, 136, 158);
-  right: 350px;
+  right: 352px;
   bottom: 80px;
 }

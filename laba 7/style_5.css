@@ -149,9 +149,11 @@ header {
   font-size: 10px;
   color: gray;
   margin: 0; 
+  padding: 0;
 }
 
 .day-forecast .day-temperature {
   font-size: 18px; 
   margin: 0; 
+  padding: 0;
 }
