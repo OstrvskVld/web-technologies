@@ -76,10 +76,8 @@
   box-sizing: border-box;
   font-size: 20px;
   padding: 0 20px;
-
   justify-content: space-between;
   align-items: center;
-
   border: 1px rgba(115, 115, 115, 0.5);
   border-style: solid none;
 }
