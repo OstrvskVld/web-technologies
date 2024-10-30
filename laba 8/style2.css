@@ -317,7 +317,7 @@ a {
 }
 
 .footer-content img{
-  width: 55px;
+  width: 90px;
   height: auto;
   border-radius: 60px;
 }
@@ -331,7 +331,7 @@ a {
   background-color: whitesmoke;
 }
 
-.burger {
+.wrapper {
   display: none;
   align-self: center;
   width: 30px;
@@ -340,11 +340,11 @@ a {
   position: relative;
 }
 
-.burger:hover {
+.wrapper:hover {
   cursor: pointer;
 }
 
-.burger::before, .burger::after {
+.wrapper::before, .wrapper::after {
   content: '';
   width: 30px;
   height: 4px;
@@ -353,11 +353,11 @@ a {
   left: 0;
 }
 
-.burger::before {
+.wrapper::before {
   top: -10px;
 }
 
-.burger::after {
+.wrapper::after {
   top: 10px;
 }
 
@@ -383,7 +383,7 @@ input[type="checkbox"] {
     width: 100%;
   }
 
-  .burger {
+  .wrapper {
     display: block;
   }
   .navigation{
