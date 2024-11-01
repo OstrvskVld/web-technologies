@@ -92,3 +92,36 @@ body {
 .item2 {
   grid-row: 1 / 3;
 }
+
+
+@media (max-width: 1024px) {
+  .cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .item1 {
+    grid-column: 1 / 3;
+    grid-row: auto;
+  }
+
+  .item2 {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+
+  .item1, .item2 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
