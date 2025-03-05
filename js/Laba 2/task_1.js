@@ -1,24 +1,24 @@
-function calcucalteMin(array) {
+function calculateMinMax(array) {
   let min = array[0];
-  for (let i = 0; i < array.length; i++) {
+  let max = array[0];
+
+  for (let i = 1; i < array.length; i++) {
     if (array[i] < min) {
       min = array[i];
     }
-  }
-  return min;
-}
-function calcucalteMax(array) {
-  let max = array[0];
-  for (let i = 0; i < array.length; i++) {
     if (array[i] > max) {
       max = array[i];
     }
   }
-  return max;
+
+  return { min, max };
 }
+
 const numbers = [1, 2, -3, 4, -5, 6, 7, 8, 9, -10];
-console.log(calcucalteMin(numbers));
-console.log(calcucalteMax(numbers));
+const result = calculateMinMax(numbers);
+
+console.log("Min:", result.min);
+console.log("Max:", result.max);
 
 // part 2
 let obj1 = {
