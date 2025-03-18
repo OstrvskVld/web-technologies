@@ -20,8 +20,8 @@ function filterdevelopers(arr) {
 filterdevelopers(employees);
 
 function delete_name(arr) {
-    let result = arr.filter(arr => arr.name !== "Marcus");
-    console.log("Array without Marcus:", result);
+    let result = arr.filter(arr => arr.age !== 30);
+    console.log("Array without age:", result);
 }
 
 delete_name(employees);
