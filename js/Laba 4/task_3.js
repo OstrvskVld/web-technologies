@@ -19,12 +19,12 @@ function filterdevelopers(arr) {
 }
 filterdevelopers(employees);
 
-function delete_name(arr) {
+function delete_age(arr) {
     let result = arr.filter(arr => arr.age !== 30);
     console.log("Array without age:", result);
 }
 
-delete_name(employees);
+delete_age(employees);
 
 function add_employee(arr) {
     let newEmployee = { name: "Tom", age: 29, job: "Designer" };

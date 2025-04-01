@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лампочка</title>
+    <link rel="stylesheet" href="task_1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Керування лампочкою</h1>
+        <select id="bulbType">
+            <option value="normal">Звичайна лампочка</option>
+            <option value="energy">Енергозберігаюча лампочка</option>
+            <option value="led">Світлодіодна лампочка</option>
+        </select>
+        <button id="toggleButton">Включити</button>
+        <button id="brightnessButton">Змінити яскравість</button>
+        <div class="bulb-container">
+            <div id="bulbShape" class="bulb off"></div>
+        </div>
+    </div>
+    <script src="task_1.js"></script>
+</body>
+</html>

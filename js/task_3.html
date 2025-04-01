@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Годинник, Таймер, Календар</title>
+    <link rel="stylesheet" href="task_3.css">
+</head>
+<body>
+    <div class="container">
+        <section id="clock">
+            <h2>Цифровий годинник</h2>
+            <div class="clock-display">
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span><span class="blink">_</span>
+            </div>
+        </section>
+
+        <section id="timer">
+            <h2>Таймер зворотного відліку</h2>
+            <label for="endTime">Вкажіть дату та час завершення:</label>
+            <input type="datetime-local" id="endTime">
+            <button id="startTimer">Запустити таймер</button>
+            <div id="countdown"></div>
+        </section>
+
+        <section id="calendar">
+            <h2>Календар</h2>
+            <div class="calendar-header">
+                <input type="month" id="monthYearPicker">
+            </div>
+            <div id="calendar-body"></div>
+        </section>
+
+        <section id="birthday">
+            <h2>До дня народження</h2>
+            <label for="birthdayPicker">Вкажіть дату вашого народження:</label>
+            <input type="date" id="birthdayPicker">
+            <div id="birthdayCountdown"></div>
+        </section>
+    </div>
+    <script src="task_3.js"></script>
+</body>
+</html>

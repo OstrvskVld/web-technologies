@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.bulb-container {
+    margin-top: 20px;
+}
+
+.bulb {
+    width: 80px;
+    height: 120px;
+    background-color: #ddd;
+    border-radius: 50% 50% 20% 20%;
+    position: relative;
+    margin: 0 auto;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.bulb::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50% 50% 0 0;
+}
+
+.bulb.off {
+    background-color: #ddd;
+}
+
+.bulb.on.normal {
+    background-color: yellow;
+    box-shadow: 0 0 20px yellow;
+}
+
+.bulb.on.energy {
+    background-color: lightgreen;
+    box-shadow: 0 0 20px lightgreen;
+}
+
+.bulb.on.led {
+    background-color: lightblue;
+    box-shadow: 0 0 20px lightblue;
+}

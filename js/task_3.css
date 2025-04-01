@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 900px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+
+.clock-display {
+    font-size: 2em;
+}
+
+.blink {
+    animation: blinker 1s step-end infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+#endTime {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#startTimer {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#startTimer:hover {
+    background-color: #0056b3;
+}
+
+#countdown {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#monthYearPicker {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+#calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.day {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.today {
+    background-color: #f0f8ff;
+}
+
+
+#birthdayPicker {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#birthdayCountdown {
+    margin-top: 10px;
+    font-size: 1.2em;
+}

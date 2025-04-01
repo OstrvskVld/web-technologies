@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Облік продуктів інтернет-магазину</title>
+    <link rel="stylesheet" href="task_4.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Облік продуктів інтернет-магазину</h1>
+
+        <section id="add-product">
+            <h2>Додати продукт</h2>
+            <label for="add-name">Назва:</label>
+            <input type="text" id="add-name"><br>
+            <label for="add-price">Ціна:</label>
+            <input type="number" id="add-price" min="0"><br>
+            <label for="add-quantity">Кількість:</label>
+            <input type="number" id="add-quantity" min="0"><br>
+            <button id="add-product-btn">Додати</button>
+            <p id="add-message" class="message"></p>
+        </section>
+
+        <section id="remove-product">
+            <h2>Видалити продукт</h2>
+            <label for="remove-id">ID продукту:</label>
+            <input type="text" id="remove-id"><br>
+            <button id="remove-product-btn">Видалити</button>
+            <p id="remove-message" class="message"></p>
+        </section>
+
+        <section id="update-product">
+            <h2>Оновити інформацію про продукт</h2>
+            <label for="update-id">ID продукту:</label>
+            <input type="text" id="update-id"><br>
+            <label for="update-price">Нова ціна:</label>
+            <input type="number" id="update-price" min="0"><br>
+            <label for="update-quantity">Нова кількість:</label>
+            <input type="number" id="update-quantity" min="0"><br>
+            <button id="update-product-btn">Оновити</button>
+            <p id="update-message" class="message"></p>
+        </section>
+
+        <section id="search-product">
+            <h2>Пошук продукту за назвою</h2>
+            <label for="search-name">Назва продукту:</label>
+            <input type="text" id="search-name"><br>
+            <button id="search-product-btn">Пошук</button>
+            <div id="search-results"></div>
+        </section>
+
+        <section id="order-product">
+            <h2>Оформити замовлення</h2>
+            <label for="order-id">ID продукту:</label>
+            <input type="text" id="order-id"><br>
+            <label for="order-quantity">Кількість для замовлення:</label>
+            <input type="number" id="order-quantity" min="1"><br>
+            <button id="order-product-btn">Замовити</button>
+            <p id="order-message" class="message"></p>
+        </section>
+
+        <section id="catalog">
+            <h2>Каталог продуктів</h2>
+            <ul id="product-list"></ul>
+        </section>
+    </div>
+
+    <script src="task_4.js"></script>
+</body>
+</html>
