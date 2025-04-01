@@ -30,7 +30,7 @@ document.getElementById('add-product-btn').addEventListener('click', () => {
     if (name && !isNaN(price) && !isNaN(quantity) && price >= 0 && quantity >= 0) {
         const productId = nextProductId++;
         productCatalog.set(productId, { name, price, quantity });
-        productHistory.set(productCatalog.get(productId), []); // Ініціалізація історії змін
+        productHistory.set(productCatalog.get(productId), []); 
         displayCatalog();
         messageDisplay.textContent = `Продукт "${name}" додано з ID: ${productId}`;
         messageDisplay.className = 'message success';
