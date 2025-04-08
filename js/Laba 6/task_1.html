@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  rel="stylesheet" href="task_1.css" type="text/css" >
+    <title>Store</title>
+</head>
+<body>
+<header>
+    <h1>Список товарів</h1>
+    <div class="total-price">Загальна вартість: <span id="totalPrice">0 грн</span></div>
+</header>
+
+<div class="controls">
+    <button id="addProductBtn">Додати новий товар</button>
+</div>
+
+<div class="filters" id="filterContainer"></div>
+<div class="sorters">
+    <button onclick="sortProducts('price')">Сортувати за ціною</button>
+    <button onclick="sortProducts('created')">Сортувати за датою створення</button>
+    <button onclick="sortProducts('updated')">Сортувати за датою оновлення</button>
+    <button onclick="resetSort()">Скинути сортування</button>
+</div>
+
+<div id="emptyMessage">Наразі список товарів пустий. Додайте новий товар.</div>
+<div class="product-list" id="productList"></div>
+
+<div class="modal" id="productModal">
+    <div class="modal-content">
+        <form id="productForm">
+            <input type="text" name="name" placeholder="Назва товару" required>
+            <input type="number" name="price" placeholder="Ціна" required min="0">
+            <input type="text" name="category" placeholder="Категорія" required>
+            <input type="url" name="image" placeholder="URL зображення" required>
+            <input type="hidden" name="id">
+            <button type="submit">Зберегти</button>
+        </form>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="task_1.js"></script>
+</body>
+</html>
