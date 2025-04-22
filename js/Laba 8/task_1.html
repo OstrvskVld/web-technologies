@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="task_1.css" />
+    <title>Laba 8</title>
+  </head>
+  <body>
+    <body>
+      <h1>Memory Pair Game</h1>
+
+      <div class="settings-panel">
+        <h2>Налаштування гри</h2>
+
+        <div class="settings-group">
+          <h3>Розмір ігрового поля</h3>
+          <label
+            >Рядки: <input type="number" id="rows" min="2" max="6" value="4"
+          /></label>
+          <label
+            >Стовпці: <input type="number" id="cols" min="2" max="6" value="4"
+          /></label>
+        </div>
+
+        <div class="settings-group">
+          <h3>Складність</h3>
+          <select id="difficulty">
+            <option value="easy">Легко (3 хв)</option>
+            <option value="normal">Нормально (2 хв)</option>
+            <option value="hard">Складно (1 хв)</option>
+          </select>
+        </div>
+
+        <div class="settings-group">
+          <h3>Гравці</h3>
+          <select id="players-count">
+            <option value="1">1 гравець</option>
+            <option value="2">2 гравці</option>
+          </select>
+
+          <div class="player-inputs" id="player-inputs-container">
+            <div class="player-input">
+              <label>Гравець 1:</label>
+              <input type="text" id="player1" value="Гравець 1" />
+            </div>
+            <div class="player-input" id="player2-input" style="display: none">
+              <label>Гравець 2:</label>
+              <input type="text" id="player2" value="Гравець 2" />
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h3>Раунди</h3>
+          <input type="number" id="rounds" min="1" max="10" value="1" />
+        </div>
+
+        <div class="controls">
+          <button id="reset-settings-btn">Скинути налаштування</button>
+          <button id="start-game-btn">Розпочати гру</button>
+        </div>
+      </div>
+
+      <div class="stats" id="stats" style="display: none">
+        <div id="timer">Час: 03:00</div>
+        <div id="moves">Ходи: 0</div>
+        <div id="current-player">Поточний гравець: Гравець 1</div>
+        <div id="current-round">Раунд: 1 з 1</div>
+      </div>
+
+      <div class="game-board" id="game-board"></div>
+
+      <div class="controls">
+        <button id="restart-btn" disabled>Рестарт</button>
+      </div>
+
+      <div class="results" id="results" style="display: none">
+        <h2>Результати гри</h2>
+        <div id="winner"></div>
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Раунд</th>
+              <th>Переможець</th>
+              <th>Ходи</th>
+              <th>Час</th>
+            </tr>
+          </thead>
+          <tbody id="results-body"></tbody>
+        </table>
+      </div>
+      <script src="task_1.js"></script>
+    </body>
+  </body>
+</html>

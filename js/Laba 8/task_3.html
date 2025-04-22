@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="task_3.css">
+    <title>Kanban</title>
+</head>
+<body>
+<h1>Kanban Board</h1>
+
+<div class="board">
+  <div class="column" id="todo">
+    <div class="column-header">To Do</div>
+    <div class="task" draggable="true" data-task-id="1">
+      <div class="task-title">Create Landing Page</div>
+      <div class="task-description">Develop design concepts for the landing page</div>
+      <span class="task-priority high">High</span>
+    </div>
+    <div class="task" draggable="true" data-task-id="2">
+      <div class="task-title">Analyze Market Trends</div>
+      <div class="task-description">Study competitor strategies and market demands</div>
+      <span class="task-priority medium">Medium</span>
+    </div>
+  </div>
+
+  <div class="column" id="in-progress">
+    <div class="column-header">In Progress</div>
+    <div class="task" draggable="true" data-task-id="3">
+      <div class="task-title">Develop Login Features</div>
+      <div class="task-description">Implement and test user authentication module</div>
+      <span class="task-priority high">High</span>
+    </div>
+  </div>
+
+  <div class="column" id="done">
+    <div class="column-header">Done</div>
+    <div class="task" draggable="true" data-task-id="4">
+      <div class="task-title">Setup Initial Framework</div>
+      <div class="task-description">Configured repository and project infrastructure</div>
+      <span class="task-priority low">Low</span>
+    </div>
+  </div>
+</div>
+
+<script src="task_3.js"></script>
+</body>
+</html>
