@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Реєстрація та Вхід</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <div class="tab active" data-tab="login">Login</div>
+        <div class="tab" data-tab="signup">Signup</div>
+      </div>
+
+     
+      <div class="tab-content active" id="login">
+        <h2 class="form-title">Login here</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginUsername">Username</label>
+            <input
+              type="text"
+              id="loginUsername"
+              placeholder="Enter username"
+              required
+            />
+            <div class="error-message" id="loginUsernameError">
+              Please enter your username
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter password"
+                required
+              />
+              <span class="toggle-password" data-target="loginPassword"
+                >👁️</span
+              >
+            </div>
+            <div class="error-message" id="loginPasswordError">
+              Password must be at least 6 characters
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="rememberMe" />
+            <label for="rememberMe">Remember Me</label>
+          </div>
+
+          <button type="submit" class="btn">Login</button>
+        </form>
+
+        <div class="switch-form">
+          Don't have an account? <a href="#" id="switchToSignup">Signup</a>
+        </div>
+      </div>
+
+      
+      <div class="tab-content" id="signup">
+        <h2 class="form-title">Create an account</h2>
+        <form id="signupForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                placeholder="Enter first name"
+                required
+              />
+              <div class="error-message" id="firstNameError">
+                First name must be 3-15 characters
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                placeholder="Enter last name"
+                required
+              />
+              <div class="error-message" id="lastNameError">
+                Last name must be 3-15 characters
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter username"
+              required
+            />
+            <div class="error-message" id="usernameError">
+              Please choose a username
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email" required />
+            <div class="error-message" id="emailError">
+              Please provide a valid email
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter password"
+                  required
+                />
+                <span class="toggle-password" data-target="password">👁️</span>
+              </div>
+              <div class="error-message" id="passwordError">
+                Password must be at least 6 characters
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="Enter password again"
+                  required
+                />
+                <span class="toggle-password" data-target="confirmPassword"
+                  >👁️</span
+                >
+              </div>
+              <div class="error-message" id="confirmPasswordError">
+                Passwords don't match
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="+380XXXXXXXXX" required />
+            <div class="error-message" id="phoneError">
+              Please provide a valid Ukrainian phone number (+380...)
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="birthDate">Date of Birth</label>
+            <input type="date" id="birthDate" required />
+            <div class="error-message" id="birthDateError">
+              You must be at least 12 years old to register
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Sex</label>
+            <div class="form-row">
+              <div class="form-group">
+                <input
+                  type="radio"
+                  id="male"
+                  name="sex"
+                  value="male"
+                  required
+                />
+                <label for="male">Male</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" id="female" name="sex" value="female" />
+                <label for="female">Female</label>
+              </div>
+            </div>
+            <div class="error-message" id="sexError">
+              Please select your sex
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" required>
+                <option value="">Select country</option>
+                <option value="ua">Ukraine</option>
+                <option value="pl">Poland</option>
+                <option value="de">Germany</option>
+                <option value="fr">France</option>
+              </select>
+              <div class="error-message" id="countryError">
+                Please select a country
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="city">City</label>
+              <select id="city" disabled required>
+                <option value="">Select city</option>
+              </select>
+              <div class="error-message" id="cityError">
+                Please select a city
+              </div>
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" required />
+            <label for="terms">Agree to terms and conditions</label>
+            <div class="error-message" id="termsError">
+              You must agree before submitting
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Submit form</button>
+        </form>
+
+        <div class="switch-form">
+          Already have an account? <a href="#" id="switchToLogin">Login</a>
+        </div>
+      </div>
+
+      
+      <div class="success-container" id="successMessage">
+        <h2>Registration Successful!</h2>
+        <p>Thank you for registering. You can now login to your account.</p>
+        <button class="btn" id="backToLogin">Back to Login</button>
+      </div>
+    </div>
+
+    <script src="form.js"></script>
+  </body>
+</html>
