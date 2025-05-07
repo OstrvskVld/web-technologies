@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
   const tabs = document.querySelectorAll(".tab");
   const tabContents = document.querySelectorAll(".tab-content");
   const switchToSignup = document.getElementById("switchToSignup");
@@ -10,11 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     tab.addEventListener("click", () => {
       const tabId = tab.getAttribute("data-tab");
 
-      
       tabs.forEach((t) => t.classList.remove("active"));
       tab.classList.add("active");
 
-    
       tabContents.forEach((content) => content.classList.remove("active"));
       document.getElementById(tabId).classList.add("active");
     });
@@ -36,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("signup").style.display = "block";
   });
 
- 
   document.querySelectorAll(".toggle-password").forEach((toggle) => {
     toggle.addEventListener("click", function () {
       const targetId = this.getAttribute("data-target");
@@ -47,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  
   const countrySelect = document.getElementById("country");
   const citySelect = document.getElementById("city");
 
@@ -77,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  
   function validateFirstName() {
     const firstName = document.getElementById("firstName").value.trim();
     const errorElement = document.getElementById("firstNameError");
@@ -330,7 +324,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  
   function showError(fieldId, errorElement, message) {
     const field = document.getElementById(fieldId);
     field.classList.add("error");
@@ -349,7 +342,6 @@ document.addEventListener("DOMContentLoaded", function () {
     errorElement.style.display = "none";
   }
 
-  
   document
     .getElementById("firstName")
     .addEventListener("blur", validateFirstName);
@@ -385,11 +377,77 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("loginPassword")
     .addEventListener("blur", validateLoginPassword);
 
-  
   document
-    .getElementById("signupForm")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
+    
+document.getElementById("signupForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+ 
+  
+  if (isFormValid) {
+    
+    const formData = new FormData(this);
+    
+   
+    formData.append('registration_date', new Date().toISOString());
+    
+    
+    sendFormData(formData, '/api/register')
+      .then(response => {
+        this.reset();
+        document.getElementById("signup").style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
+      })
+      .catch(error => {
+        console.error('Помилка реєстрації:', error);
+        alert('Помилка реєстрації. Спробуйте ще раз.');
+      });
+  }
+});
+
+
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  
+  
+  if (isFormValid) {
+    const formData = new FormData(this);
+    
+    sendFormData(formData, '/api/login')
+      .then(response => {
+        this.reset();
+        alert("Login successful!");
+       
+      })
+      .catch(error => {
+        console.error('Помилка входу:', error);
+        alert('Невірний логін або пароль');
+      });
+  }
+});
+
+
+function sendFormData(formData, url) {
+  return fetch(url, {
+    method: 'POST',
+    body: formData,
+   
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  });
+}
+
+
+function logFormData(formData) {
+  for (let [key, value] of formData.entries()) {
+    console.log(key + ': ' + value);
+  }
+}
 
       const isFirstNameValid = validateFirstName();
       const isLastNameValid = validateLastName();
@@ -418,7 +476,6 @@ document.addEventListener("DOMContentLoaded", function () {
         isCityValid &&
         isTermsValid
       ) {
-        
         setTimeout(() => {
           this.reset();
           document.getElementById("signup").style.display = "none";
@@ -434,11 +491,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const isPasswordValid = validateLoginPassword();
 
     if (isUsernameValid && isPasswordValid) {
-      
       setTimeout(() => {
         this.reset();
         alert("Login successful!");
       }, 1000);
     }
   });
-});
+
