@@ -1,3 +1,21 @@
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  --accent-color: #6c5ce7;
+  --light-color: #f8f9fa;
+  --dark-color: #2d3436;
+  --text-color: #636e72;
+  --success-color: #00b894;
+  --danger-color: #d63031;
+  --border-radius: 12px;
+  --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +25,7 @@
 
 body {
     font-family: "lucida grande", "lucida grande", sans-serif;
-    background-image: linear-gradient(to right, lightcoral, lightblue);
+    background-image: linear-gradient(to right, #0c3483, #a2b6df);
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -87,7 +105,7 @@ body {
 
 .field label {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .field input,
@@ -115,9 +133,12 @@ body {
 
 .field small {
     color: red;
-    font-size: 8px;
+    font-size: 14px;
     margin-top: 4px;
     visibility: hidden;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
 }
 
 .field input.invalid {
@@ -157,12 +178,25 @@ button[type="submit"] {
     background-color: #007bff;
     color: white;
     padding: 12px;
-    font-size: 16px;
+    
     border-radius: 8px;
     cursor: pointer;
     width: 100%;
-    transition: background 0.3s;
+    
     margin-top: 8px;
+
+
+
+
+    
+    
+   
+    
+    font-size: 18px;
+    cursor: pointer;
+    
+    transition: background 0.3s, color 0.3s;
+    font-weight: bold;
 }
 
 button[type="submit"]:hover {
@@ -216,6 +250,13 @@ button[type="submit"]:hover {
         box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.3);
         cursor: pointer;
         border: 2px solid white;
+        font-size: 16px;
+        font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
 
         &:hover {
             background-color: #f0f0f0;
@@ -236,9 +277,7 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 720px) {
-    /*.card-container {*/
-    /*    flex-direction: column;*/
-    /*}*/
+    
     .navbar {
         & > * {
             padding: 16px;

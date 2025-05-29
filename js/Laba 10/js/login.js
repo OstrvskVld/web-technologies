@@ -22,8 +22,8 @@ loginForm.addEventListener('submit', (e) => {
 function validateLoginForm() {
     let isValid = true;
 
-    const username = document.getElementById('login-username');
-    const password = document.getElementById('login-password');
+    const username = document.getElementById('email');
+    const password = document.getElementById('password');
 
     if (username.value.trim() === '') {
         setError(username, 'Username is required');

@@ -4,8 +4,8 @@ let isRegistered = false;
 const countrySelect = document.getElementById('country');
 const citySelect = document.getElementById('city');
 const citiesByCountry = {
-    'Ukraine': ['Kyiv', 'Lviv', 'Odesa', 'Chernivtsi', 'Khust'],
-    'USA': ['New York', 'Los Angeles', 'Chicago']
+    'Ukraine': ['Kyiv', 'Lviv', 'Odesa', 'Chernivtsi', 'Dnipro'],
+    'USA': ['New York', 'Los Angeles', 'California', 'Chicago', 'Houston'],
 };
 
 function setItemWithExpire(key, value, expireInSeconds) {

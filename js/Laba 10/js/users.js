@@ -93,30 +93,91 @@ async function getUsers(n) {
     currentUsers = [...users];
 }
 
-function showUser(user) {
-    const likedUsers = JSON.parse(localStorage.getItem('likedUsers') || '[]');
-    const isLiked = likedUsers.some(u => u.login.uuid === user.login.uuid);
 
-    return `
-        <div class="user-card">
-            <div class="user-info">
-                <p class="user-card-title">${user.name.first} ${user.name.last}</p>
-                <p class="user-card-text">Age: ${user.dob.age}</p>
-                <p class="user-card-text">Location: ${user.location.city}, ${user.location.country}</p>
-                <p class="user-card-text">Gender: ${user.gender}</p>
-                <p class="user-card-text">Phone: ${user.phone}</p>
-                <p class="user-card-text">Email: ${user.email}</p>
-                <p class="user-card-text">Reg-age: ${user.registered.age}</p>
-            </div>
-            <img class="user-img" src="${user.picture.large}" alt="User image">
-            <button class="like ${isLiked ? 'liked' : ''}" data-user-id="${user.login.uuid}">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" 
-                    width="24px" fill="#000000">
-                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/>
-                </svg>
-            </button>
-        </div>`;
+
+
+function toggleLike(user) {
+    const likedUsers = JSON.parse(localStorage.getItem('likedUsers') || '[]');
+    const userId = user.login.uuid;
+
+    const index = likedUsers.findIndex(u => u.login.uuid === userId);
+    if (index === -1) {
+        likedUsers.push(user);
+    } else {
+        likedUsers.splice(index, 1);
+    }
+
+    localStorage.setItem('likedUsers', JSON.stringify(likedUsers));
+    return index === -1;
 }
+
+
+cardContainer.addEventListener('click', (e) => {
+    
+    if (e.target.closest('.like')) {
+        const button = e.target.closest('.like');
+        const userId = button.dataset.userId;
+        const user = users.find(u => u.login.uuid === userId);
+        if (!user) return;
+
+        const wasAdded = toggleLike(user);
+        button.innerHTML = wasAdded ? '❤️' : '🤍';
+        
+        
+        if (isFavoritesView && !wasAdded) {
+            removeUserCard(userId);
+        }
+    }
+    
+    
+    if (e.target.closest('.delete-user')) {
+        const button = e.target.closest('.delete-user');
+        const userId = button.dataset.userId;
+        removeUserFromFavorites(userId);
+    }
+});
+
+
+function removeUserFromFavorites(userId) {
+    
+    const likedUsers = JSON.parse(localStorage.getItem('likedUsers') || '[]');
+    const updatedLikes = likedUsers.filter(u => u.login.uuid !== userId);
+    localStorage.setItem('likedUsers', JSON.stringify(updatedLikes));
+    
+    
+    removeUserCard(userId);
+}
+
+
+function removeUserCard(userId) {
+    const card = document.querySelector(`.user-card[data-user-id="${userId}"]`);
+    if (card) {
+        card.style.animation = 'fadeOut 0.3s ease';
+        setTimeout(() => {
+            card.remove();
+            checkEmptyFavorites();
+        }, 300);
+    }
+}
+
+
+function checkEmptyFavorites() {
+    if (cardContainer.children.length === 0) {
+        cardContainer.innerHTML = '<p class="no-favorites">Немає вподобаних користувачів</p>';
+    }
+}
+
+
+document.getElementById('favorites').addEventListener('click', () => {
+    const likedUsers = JSON.parse(localStorage.getItem('likedUsers') || '[]');
+    cardContainer.innerHTML = likedUsers.length > 0 ? '' : '<p class="no-favorites">Немає вподобаних користувачів</p>';
+    
+    likedUsers.forEach(user => {
+        cardContainer.innerHTML += showUser(user, true); 
+    });
+    
+    isFavoritesView = true;
+});
 
 usersButton.addEventListener('click', async () => {
     if (getItemWithExpire('user')) {
